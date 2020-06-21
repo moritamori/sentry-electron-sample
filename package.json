@@ -4,12 +4,18 @@
   "description": "",
   "main": "main.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "electron .",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "clean:linux": "rimraf ./dist/linux*",
+    "build:linux-dev": "npm run clean:linux && electron-builder --linux"
   },
   "author": "moritamorie",
   "license": "ISC",
   "dependencies": {
-    "@sentry/electron": "1.3.0",
+    "@sentry/electron": "1.3.0"
+  },
+  "devDependencies": {
+    "electron-builder": "^22.7.0",
     "electron": "^9.0.4"
   }
 }
